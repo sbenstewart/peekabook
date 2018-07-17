@@ -1,0 +1,26 @@
+{
+  "name": "peekabook",
+  "description": "bookApp",
+  "main": "index.js",
+  "authors": [
+    "Ganeshrockz <ganesh890370@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Ganeshrockz/bounceTest",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ] ,
+  "dependencies": {
+	"bootstrap": "latest",
+        "font-awesome": "latest",
+        "animate.css": "latest",
+        "angular": "latest",
+        "angular-route": "latest"   
+}
+
+}

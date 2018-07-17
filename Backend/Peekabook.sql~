@@ -1,0 +1,112 @@
+# ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: 127.0.0.1 (MySQL 5.7.22)
+# Database: Peekabook
+# Generation Time: 2018-05-13 19:24:03 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table Book
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `Book`;
+
+CREATE TABLE `Book` (
+  `Sno` int(10) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(40) NOT NULL,
+  `Author` varchar(20) NOT NULL,
+  `Isbn` int(15) NOT NULL,
+  PRIMARY KEY (`Sno`),
+  UNIQUE KEY `Isbn` (`Isbn`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+LOCK TABLES `Book` WRITE;
+/*!40000 ALTER TABLE `Book` DISABLE KEYS */;
+
+INSERT INTO `Book` (`Sno`, `Name`, `Author`, `Isbn`)
+VALUES
+	(1,'Alchemist','Dummy',123),
+	(2,'HAHA','asdf',1234),
+	(3,'HA','sdf',9264),
+	(4,'Bird tales','Sukin',432);
+
+/*!40000 ALTER TABLE `Book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table Student
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `Student`;
+
+CREATE TABLE `Student` (
+  `Peekabookid` int(8) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(20) NOT NULL,
+  `Contact` varchar(10) NOT NULL,
+  `Department` varchar(40) NOT NULL,
+  `Year` int(4) NOT NULL,
+  `Locality` varchar(20) NOT NULL,
+  PRIMARY KEY (`Peekabookid`),
+  UNIQUE KEY `Contact` (`Contact`)
+) ENGINE=InnoDB AUTO_INCREMENT=12345687 DEFAULT CHARSET=latin1;
+
+LOCK TABLES `Student` WRITE;
+/*!40000 ALTER TABLE `Student` DISABLE KEYS */;
+
+INSERT INTO `Student` (`Peekabookid`, `Name`, `Contact`, `Department`, `Year`, `Locality`)
+VALUES
+	(12345679,'Sukin','9944513445','CSE',2,'Guindy'),
+	(12345680,'ram','1223456','cse',3,'Chennai'),
+	(12345683,'ram','98764342','cse',3,'Chennai'),
+	(12345685,'Mukesh','9123457887','ECE',3,'Tambaram');
+
+/*!40000 ALTER TABLE `Student` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table Transaction
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `Transaction`;
+
+CREATE TABLE `Transaction` (
+  `Peekabookid` int(8) NOT NULL,
+  `Isbn` int(3) NOT NULL,
+  `BookCondition` varchar(10) NOT NULL,
+  `DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Peekabookid`,`Isbn`,`BookCondition`,`DateTime`),
+  KEY `Isbn` (`Isbn`),
+  CONSTRAINT `Transaction_ibfk_1` FOREIGN KEY (`Peekabookid`) REFERENCES `Student` (`Peekabookid`),
+  CONSTRAINT `Transaction_ibfk_2` FOREIGN KEY (`Isbn`) REFERENCES `Book` (`Isbn`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `Transaction` WRITE;
+/*!40000 ALTER TABLE `Transaction` DISABLE KEYS */;
+
+
+
+/*!40000 ALTER TABLE `Transaction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

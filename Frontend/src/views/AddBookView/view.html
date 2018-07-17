@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Add Books | PeekABook</title>
+</head>
+<body>
+	<form class="cd-form floating-labels">
+		<fieldset>
+			<legend>Person Details</legend>
+
+				<div hidden class="icon">
+				<input type="text" name="cd-pid" id="cd-pid" hidden required>
+		    </div> 			
+
+			<div class="icon">
+				<label class="cd-label student-label" for="cd-name">Name</label>
+				<input class="user" type="text" name="cd-name" id="cd-name" disabled required>
+		    </div> 
+
+		    <div class="icon">
+		    	<label class="cd-label student-label" for="cd-company">Department</label>
+				<input class="company" type="text" name="cd-company" id="cd-company" disabled required>
+		    </div> 
+
+		    <div class="icon">
+		    	<label class="cd-label student-label" for="cd-phone">Phone Number</label>
+				<input class="user" type="text" name="cd-phone" id="cd-phone" required>
+		    </div>
+		    <div class="icon">
+		    	<label class="cd-label student-label" for="cd-locality">Locality</label>
+				<input class="email " type="text" name="cd-locality" id="cd-locality" disabled required>
+		    </div>
+		    <div>
+				<h4>Year</h4>
+
+				<p class="cd-select icon">
+					<select class="budget" id="cd-year">
+						<option value="0">Select Year</option>
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+					</select>
+				</p>
+			</div>
+			<div>
+				
+			</div> 
+		</fieldset>
+
+		<fieldset>
+			<legend>Book Details</legend>
+			<div class="icon">
+				<label class="cd-label book-label" for="cd-bookname">Book Name</label>
+				<input class="company" type="text" name="cd-bookname" id="cd-bookname" disabled required>
+		    </div> 
+
+		    <div class="icon">
+		    	<label class="cd-label book-label" for="cd-author">Author</label>
+				<input class="user" type="text" name="cd-author" id="cd-author" disabled required>
+		    </div> 
+
+		    <div class="icon">
+		    	<label class="cd-label book-label" for="cd-isbn">ISBN</label>
+				<input class="email" type="text" name="cd-isbn" id="cd-isbn" required>
+		    </div>
+			<div>
+				<h4>Present Condition</h4>
+
+				<ul class="cd-form-list" id="cd-condition">
+					<li>
+						<input type="radio" name="radio-button" id="cd-radio-1" value="Good" checked>
+						<label for="cd-radio-1">Good</label>
+					</li>
+						
+					<li>
+						<input type="radio" name="radio-button" id="cd-radio-2" value="Average">
+						<label for="cd-radio-2">Average</label>
+					</li>
+
+					<li>
+						<input type="radio" name="radio-button" id="cd-radio-3" value="Bad">
+						<label for="cd-radio-3">Bad</label>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+		      	<input id="cd-submit" type="button" value="Submit">
+		    </div>
+		</fieldset>
+	</form>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
