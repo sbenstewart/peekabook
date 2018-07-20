@@ -30,9 +30,9 @@ app.use(
     connection(mysql,{
 
         host: 'localhost',
-        user: process.env.DATABASE_USER,
-        password : process.env.DATABASE_PASS,
-        port : '3306', 
+        user: 'root',
+        password : '314159',
+        port : '3306',
         database:'Peekabook'
 
     },'pool')
