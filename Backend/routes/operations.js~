@@ -286,7 +286,7 @@ alert(books[i][j][val])
 };
 
 
-exports.getStudentGivenList = function(req,res){
+exports.getGivenList = function(req,res){
   if(!req.body.student) {
     handleError('Request not contains all fields', 400, 'Invalid Request', res);
     return;

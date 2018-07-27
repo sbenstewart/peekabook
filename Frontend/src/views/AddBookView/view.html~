@@ -78,13 +78,13 @@
 
 				<ul class="cd-form-list" id="cd-condition">
 					<li>
-						<input type="radio" name="radio-button" id="cd-radio-1" value="Very Good" checked>
-						<label for="cd-radio-1">Very Good</label>
+						<input type="radio" name="radio-button" id="cd-radio-1" value="Good" checked>
+						<label for="cd-radio-1">Good</label>
 					</li>
 						
 					<li>
-						<input type="radio" name="radio-button" id="cd-radio-2" value="Fair">
-						<label for="cd-radio-2">Fair</label>
+						<input type="radio" name="radio-button" id="cd-radio-2" value="Average">
+						<label for="cd-radio-2">Average</label>
 					</li>
 
 					<li>

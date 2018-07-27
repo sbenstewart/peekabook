@@ -48,7 +48,7 @@ app.post('/operations/postTransaction', operations.postTransaction);
 app.post('/operations/getTransaction', operations.getTransaction);
 app.post('/operations/getList', operations.getList);
 app.post('/operations/getStudentReceivedList', operations.getStudentReceivedList);
-app.post('/operations/getStudentGivenList', operations.getStudentGivenList);
+
 
 
 
