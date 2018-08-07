@@ -13,7 +13,7 @@
     "express-myconnection": "^1.0.4",
     "jade": "*",
     "mysql": "^2.2.0",
-    "fresh": "0.5.2",
-    "lodash": "4.17.5"
+    "fresh": "latest",
+    "lodash": "latest"
   }
 }
