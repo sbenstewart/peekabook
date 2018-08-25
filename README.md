@@ -3,6 +3,8 @@ An offline NodeJS site for a startup by our college senior.<br>
 ## Spoilers first
 This project had it's alpha release being made by our seniors.<br>
 NodeJS has been used to make this product.<br>
+This was done a long time back and probably should be archived.<br>
+But it is still under development in the same base case.
 ## What has been done
 The site has the facility to store the details of students, books and the transactions.<br>
 The schema will be uploaded shortly.<br>
