@@ -16,5 +16,5 @@ Do note that the following are for long terms also.<br>
 * Android and iOS app.
 * Website compatibility.
 ## How to contribute
-Users can follow what the project leader says. But the usual way is that the issues can be taken up anyone. Just a comment under the issue or the Slack group would help.<br>
+Users can follow what the project leader says. But the usual way is that the issues can be taken up anyone. Just a comment under the issue or the Slack group would help.<br><br>
 <b>Have a great day :)</b>
