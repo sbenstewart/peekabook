@@ -9,7 +9,7 @@
     "asyncawait": "^1.0.6",
     "cors": "^2.8.4",
     "ejs": "^2.5.5",
-    "express": "^3.5.1",
+    "express": "^3.11.0",
     "express-myconnection": "^1.0.4",
     "jade": "*",
     "mysql": "^2.2.0",
